@@ -40,8 +40,8 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Usuario u = new Usuario();
-		u.setEmail(request.getParameter("email"));
-		u.setSenha(request.getParameter("pwd1"));
+		u.setEmail(request.getParameter("tEmail"));
+		u.setSenha(request.getParameter("tSenha"));
 		
 		try {
 			Usuario check = new Usuario();

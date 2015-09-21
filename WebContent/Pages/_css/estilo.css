@@ -1,0 +1,458 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+@font-face {
+	font-family: 'FonteLogo';
+	src: url("../_fonts/bubblegum-sans-regular.otf")
+}
+
+body {
+	font-family: Arial, sans-serif;
+background: url("../_imagens/bg-vert.jpg");
+color: rgba(0,0,0,1);
+}
+
+div#interface{
+	width:900px;
+	background-color: #ffffff;
+	margin: -20px auto 0px auto;
+	box-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	padding: 10px;
+}
+
+p { 
+text-align: justify;
+text-indent:20px;
+}
+a {
+	color: #606060;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+	
+}
+
+ /* Cabeçalho */
+
+header#cabecalho img#icone{
+	position: absolute;
+	left: 980px;
+	top: 70px;
+}
+
+header#cabecalho{
+	border-bottom:1px #606060 solid;
+	height: 150px;
+	background: url("../_imagens/.jpg")no-repeat 0px 20px;
+}
+
+header#cabecalho h1{
+	font-family: 'FonteLogo',sans-serif;
+	font-size: 30pt;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	padding: 0px;
+	margin-bottom: 0px;
+	
+}
+
+header#cabecalho h2{
+	font-family: 'Indie Flower', cursive;
+	font-size: 15pt;
+	color: #888888;
+	padding: 0px;
+	margin-top: 0px;
+	
+}
+
+/* Barra de procurar */
+
+.search{ /* Geral */
+float: right; /* Flutuando a esquerda, poderá também mudar para Right (Direita) e Left (Esquerda) */
+margin-right: 150px;
+
+margin-top: 60px; /* Margem superior, edite se precisar, - sobe e + desce  */
+font-family: Tahoma, Tahoma; /* Fonte da letra que será escrita quando procurarmos por algo */
+  border-radius: 10px 20px 30px 40px;
+    }
+
+
+
+ 
+ 
+.searchbar{ /* Barrinha onde se digita */
+height: 18px; /* Altura da barrinha */
+width: 200px; /* Largura da barrinha */
+margin-right:50px;
+margin-top:-600px; /* Margem superior, edite se precisar, - sobe e + desce  */
+margin-bottom:-18px; /* Margem inferior, edite se precisar, - sobe e + desce */
+color: #000000; /* Cor da fonte da letra que será escrita quando procurarmos por algo */
+border:solid 1px #ddd; /* Borda */
+padding:3px 5px;
+border-radius:1em; /* Bordas Arredondadas */
+box-shadow:0 1px 0px rgba(0,0,0,.1); /* Sombra interna */
+background: #fff; /* Cor do fundo */
+background:-webkit-gradient(linear, left top, left bottom,from(#fff),to(#ededed));
+background:-moz-linear-gradient(top, #fff, #ededed);
+filter:progidXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#ededed');
+-ms-filter:progidXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed')
+ border-radius: 10px 20px 30px 40px;
+}
+.searchbut{ /* Botão */
+border:0 !important;
+float: left;
+background: #D9D9D9; /* Cor do fundo do botão */
+cursor: pointer;
+color:#000000; /* Cor do texto */
+padding:0 10px 5px 10px;
+height:26px; /* Altura do botão */
+margin-top: -0px; /* Margem superior, edite se precisar, - sobe e + desce  */
+margin-right: -1px; /* Margem direita, edite se precisar */
+box-shadow:0 0 2px #aaa; /* Sombra */
+ border-radius: 10px 20px;
+}
+.searchbut:hover { /* Botão Hover */
+background:#D5B2F0; /* Cor do fundo do botão hover */
+}
+
+
+/*formatação de imagens com legendas*/
+
+figure.foto-legenda {
+position: relative;
+border:8px solid white;
+box-shadow: 1px 1px 4px black;
+}
+
+
+figure.foto-legenda img {
+width: 100%;
+height:100%;
+}
+
+
+figure.foto-legenda figcaption {
+opacity: 0;
+position: absolute;
+top:0px;
+background-color: rgba(0,0,0,0.4);
+color:white;
+width: 100%;
+height: 100%;
+padding: 10px;
+box-sizing: border-box;
+transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption {
+opacity: 1;
+
+}
+
+
+
+
+
+
+/*Formatação do menu*/
+
+		
+nav#menu{
+	list-style:none; 
+	 
+	float:left;
+
+	}
+
+nav#menu li {
+	position:relative; 
+	float:left; 
+	
+	
+	background-color:#9C9C9C;
+	padding: 5px;
+	transition: opacity 1s;
+	border-style: groove;
+	font-size: 12pt;
+	border:1px solid #545454; 
+	
+	
+
+	}
+
+nav#menu li a{
+	color:#333; 
+	text-decoration:none; 
+	padding:2px 5px; 
+	display:block;
+	
+	}
+	
+	nav#menu h1 {
+	display: none;
+}
+
+nav#menu li a:hover{
+	background:#1C1C1C; 
+	color:#fff;
+	
+	-moz-box-shadow:0 3px 10px 0 #CCC;
+	-webkit-box-shadow:0 3px 10px 0 #ccc;
+	text-shadow:0px 0px 5px #fff;
+	text-decoration: underline;
+	border-radius: ;
+	
+	}
+	
+	nav#menu ul {
+	list-style: none;
+	text-transform: none;
+	position: absolute;
+	top: -20px;
+	left: 500px;
+	
+
+	
+}
+
+nav#menu li   ul{
+	position:absolute; 
+	top: 25px;
+	left:0px; 
+	background-color:#fff; 
+	display:none;
+	
+	
+	
+	}
+
+nav#menu li:hover ul{
+	display:block;
+	border-radius: 10px;
+	}
+	
+
+
+nav#menu li ul li{
+	border:1px solid #D9D9F3; 
+	display:block; 
+	width:150px;
+	background-color: #fff;
+	border-radius: 2px;
+	position: relative;
+	left: -50px;
+	color: #fff;
+	
+	
+	
+
+
+    
+	}
+	
+
+
+						
+
+
+
+
+
+	/* Formatação do botão */
+		
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
+		.button	
+		{
+			position: relative;
+			display: inline-block;
+			background: #545454;
+			color: #fff;
+			text-align: center;
+			border-radius: 10px 20px;
+			text-decoration: none;
+			padding: 0.25em 2em 0.25em 2em;
+			border: 5;
+			cursor: pointer;
+                        left:10%;
+			outline: 0;
+			font-weight: 300;
+			-moz-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+			-webkit-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+			-o-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+			-ms-transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+			transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out, border-bottom-color 0.35s ease-in-out;
+		}
+
+			input[type="button"]:hover,
+			input[type="submit"]:hover,
+			input[type="reset"]:hover,
+			.button:hover
+			{
+				color: #fff;
+				background: #5F9F9F;
+			}
+			
+			input[type="button"].alt,
+			input[type="submit"].alt,
+			input[type="reset"].alt,
+			.button.alt
+			{
+				background: #5F9F9F;
+			}		
+
+
+				input[type="button"].alt:hover,
+				input[type="submit"].alt:hover,
+				input[type="reset"].alt:hover,
+				.button.alt:hover
+				{
+					background: #3B353C;
+				} 
+
+
+
+
+ /* Cabeçalho */
+
+section#corpo {
+	display: block;
+	width: 500px;
+	float: left;
+	border-right:1px solid #606060;
+	padding-right: 15px;
+}
+
+article#noticia-principal h2 {
+	font-size: 13pt;
+	color: #606060;
+	background-color: #dddddd;
+	padding: 5px 0px 5 px 10px;
+	margin: 10px 0px 10px 0px;
+	
+}
+
+header#cabecalho-artigo h1{
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.direita{
+	text-align: right;
+	
+}
+
+header#cabecalho-artigo h2{
+	font-size: 13pt;
+	color: #cecece;
+	background-color: #ffffff;
+	margin: 0px;
+}
+
+header#cabecalho-artigo h3 {
+	font-size: 12px;
+	color: #606060;
+	
+}
+
+ /* Tabela */
+ 
+table#tabelaspec{
+	border: 1px solid #606060;
+	border-spacing: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table#tabelaspec td {
+	border: 1px solid #606060;
+	padding:10px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+table#tabelaspec th{
+	color: #ffffff;
+	background-color: #606060;
+	vertical-align: top;
+	font-weight: bold;
+	
+}
+table#tabelaspec tr{
+	
+	background-color: #cecece;
+	
+}
+
+table#tabelaspec caption{
+	color: #888888;
+	font-size: 13pt;
+	font-weight: bolder;
+}
+
+table#tabelaspec caption span{
+	display: block;
+	float: right;
+	color: #000000;
+	font-size: 8pt;
+	margin-top: 10px;
+	
+	
+}
+
+ /* Lateral do layout */
+ 
+section#lateral{
+	display: block;
+	width: 350px;
+	float: right;
+}
+
+aside#lateral {
+	display: block;
+	width: 350px;
+	float: right;
+	background-color: #dddddd;
+	padding: 10px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+
+aside#lateral h1{
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	background-color: #dddddd;
+	padding:10px;
+	margin-top: 0px; 
+}
+
+aside#lateral h2{
+	color: #ffffff;
+	font-size:13pt;
+	background-color: #606060;
+	padding: 5px;
+	
+	
+	
+}
+
+/* Rodapé */
+
+footer#rodape{
+	clear: both;
+	border-top: 1px solid #606060;
+	
+}
+
+footer#rodape p{
+	text-align: center;
+	
+	
+}
+

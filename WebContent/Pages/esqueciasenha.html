@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+
+<title>Coleta Seletiva</title>
+<link rel="stylesheet" href="_css/estilo.css"/>
+<link rel="stylesheet" href="_css/form.css"/>
+<script language="javascript" src="_javascript/funcoes.js">
+</script>
+
+
+
+
+</head>
+<body>
+<div id="interface">
+<header id="cabecalho">
+
+<hgroup>
+
+<h1>Coleta Seletiva</h1>
+<h2>Reduzir, Reciclar, Reutilizar, Repensar</h2>
+</hgroup>
+<img id="icone" src="_imagens/senha.png"/>
+<nav id="menu">
+<h1>Menu Principal</h1>
+  <ul type="disc">
+  <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/senha.png')"><a href="home.html">Home</a></li>
+  <li>
+ <a href="">Cadastro</a>
+ <ul>
+ <li onmouseover="mudaFoto('_imagens/cada.png')" onmouseout="mudaFoto('_imagens/senha.png')"><a href="cadastroempresarial.html"> Cadastro Empresarial</a></li>
+  <li onmouseover="mudaFoto('_imagens/prof.png')" onmouseout="mudaFoto('_imagens/senha.png')"><a href="cadastrousuario.html"> Cadastro Usuário</a></li>
+  </ul>
+  </li>
+ <li onmouseover="mudaFoto('_imagens/lol.png')" onmouseout="mudaFoto('_imagens/senha.png')"><a href="login.html">Login</a></li>
+  <li onmouseover="mudaFoto('_imagens/senha.png')" onmouseout="mudaFoto('_imagens/senha.png')"><a href="esqueciasenha.html">Esqueci a senha</a></li>
+
+  </ul> 
+ </nav>
+</header>
+
+
+<form method="post" id="fContato" action="">
+<fieldset id="Senha"><legend>Esqueceu sua senha?</legend>
+    <p><label for="cEmail">E-mail:</label><input type="email" name="tEmail"id="cEmail" size="18" maxlength="40" placeholder="Digite seu e-mail"/></p>
+   
+	 <p><label for="cEst">Pergunta Secreta:</label> 
+	 <select name="tEst" id="cEst" form="perform" onChange="valida()" >
+    <option value="animal">Nome do seu primeiro animal</option> 
+    <option value="professor">Seu professor favorito</option> 
+    <option value="amigo">Amigo de infância</option> 
+    <option value="nasceu">Onde nasceu?</option> 
+    <option value="best">Melhor amigo</option> 
+    <option value="avo">Nome do seu avô</option> 
+    <option value="cor">Cor preferida</option> 
+    <option value="musica">Musica preferida</option> 
+    <option value="familiar">Familiar que mais gosta</option> 
+    <option value="odiar">O que mais odeia?</option> 
+    </select>
+<p><label for="cResp">Resposta Secreta:</label>
+<input type="text" name="tResp" id="cResp" size="15" maxlength="40" placeholder=""/></p>
+   
+   
+	</fieldset>
+
+
+
+
+<input type="submit" onClick="checkMe()" value="Enviar">
+
+<input type="reset" value="Resetar">
+<br/>
+<br/>
+</form>
+
+<footer id="rodape">
+<p>Copyright 2015 - by One Core<br/>
+<a href="http://facebook.com/" target="_blank">Facebook</a> | Twitter</p>
+</footer>
+</div>
+</body>
+</html>

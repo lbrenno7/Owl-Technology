@@ -44,20 +44,20 @@ public class UsuarioPessoaServlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		
 		UsuarioPessoa pessoa = new UsuarioPessoa();
-		pessoa.setNome(request.getParameter("nome"));
-		pessoa.setEmail(request.getParameter("email"));
-		pessoa.setRG(request.getParameter("rg"));
-		pessoa.setCPF(request.getParameter("cpf"));
-		pessoa.setCEP(request.getParameter("cep"));
-		pessoa.setRua(request.getParameter("rua"));
-		pessoa.setNumero(Integer.parseInt(request.getParameter("numero")));
-		pessoa.setBairro(request.getParameter("bairro"));
-		pessoa.setCidade(request.getParameter("cidade"));
-		pessoa.setEstado(request.getParameter("estado"));
-		pessoa.setTelefone(request.getParameter("phone"));
-		pessoa.setSenha(request.getParameter("pwd1"));
-		pessoa.setPerguntaSecreta(request.getParameter("pergunta"));
-		pessoa.setRespostaSecreta(request.getParameter("resposta"));
+		pessoa.setNome(request.getParameter("tNome"));
+		pessoa.setEmail(request.getParameter("tEmail"));
+		pessoa.setCPF(request.getParameter("tCPF"));
+		pessoa.setRG(request.getParameter("tRG"));
+		pessoa.setTelefone(request.getParameter("tTel"));
+		pessoa.setSenha(request.getParameter("PWD1"));
+		pessoa.setRua(request.getParameter("tRua"));
+		pessoa.setNumero(Integer.parseInt(request.getParameter("tNum")));
+		pessoa.setBairro(request.getParameter("tBairro"));
+		pessoa.setCEP(request.getParameter("tCep"));
+		pessoa.setEstado(request.getParameter("tEst"));
+		pessoa.setCidade(request.getParameter("tCid"));
+		pessoa.setPerguntaSecreta(request.getParameter("tPerg"));
+		pessoa.setRespostaSecreta(request.getParameter("tResp"));
 		pessoa.setGrupo(0);
 		
 	
@@ -73,7 +73,7 @@ public class UsuarioPessoaServlet extends HttpServlet {
 			
 			
 			 
-			response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/login.jsp");
+			response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/login.html");
 			
 	}
 

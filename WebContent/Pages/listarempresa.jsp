@@ -3,58 +3,74 @@ pageEncoding="ISO-8859-1" %>
 <%@page import="br.com.fafica.projeto.onecore.modelos.Empresa,
 br.com.fafica.projeto.onecore.controladores.EmpresaControler,
 java.util.List, java.sql.SQLException"%>
-<!DOCTYPE HTML>
 
-<html>
-	<head>
-		<title>One Core</title>
-		<meta http-equiv="content-type" content="text/html; charset utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.onvisible.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-			<link rel="stylesheet" href="css/style-noscript.css" />
-		</noscript>
-		
-	</head>
-	<body class="faq">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
 
-		<!-- Header -->
-			<div id="header">
+<title>Coleta Seletiva</title>
+<link rel="stylesheet" href="_css/estilo.css"/>
+<link rel="stylesheet" href="_css/specs.css"/>
 
-				<!-- Inner -->
-					<div class="inner">
-						<header>
-							<h1><a href="index.html" id="logo">Coleta Seletiva</a></h1>
-						</header>
-					</div>
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="homes.html">Home</a></li>
-                                                        <li><a href="cadastroempresa.jsp">Cadastro Empresa</a></li>
-                                                        <li><a href="listarempresa.jsp">Listar Empresa</a></li>
-							
-                                                        <li><a href="listar.jsp">Listar Coleta</a></li>
-							
-							
-							
-                                                        <li><a href="login.jsp" accesskey="4" title="">Sair</a></li>
-						</ul>
-					</nav>
 
-			</div>
-							<table style="width:100%">
+</head>
+<script language="javascript" src="_javascript/funcoes.js">
+
+</script>
+
+<body>
+<div id="interface">
+<header id="cabecalho">
+
+<hgroup>
+
+<h1></h1>
+<h2></h2>
+</hgroup>
+<img id="icone" src="_imagens/18-anxiety-icon1.png"/>
+<nav id="menu">
+<h1>Menu Principal</h1>
+  <ul type="disc">
+ <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/18-anxiety-icon1.png')"><a href="index.html">Inicial</a></li>
+ <li onmouseover="mudaFoto('_imagens/parc.png')" onmouseout="mudaFoto('_imagens/18-anxiety-icon1.png')"><a href="parcerias.html"> Parcerias</a></li>
+  <li onmouseover="mudaFoto('_imagens/recy.png')" onmouseout="mudaFoto('_imagens/18-anxiety-icon1.png')"><a href="reciclando.html"> Reciclando</a></li>
+ <li onmouseover="mudaFoto('_imagens/faq_img.png')" onmouseout="mudaFoto('_imagens/18-anxiety-icon1.png')"><a href="faq.html">FAQ</a></li>
+ <li onmouseover="mudaFoto('_imagens/coleetaa.png')" onmouseout="mudaFoto('_imagens/18-anxiety-icon1.png')"><a href="listarcoleta.html">Listar coleta</a></li>
+ <li onmouseover="mudaFoto('_imagens/18-anxiety-icon1.png')" onmouseout="mudaFoto('_imagens/18-anxiety-icon1.png')"><a href="listarempresa.html">Listar empresa</a></li>
+ <li onmouseover="mudaFoto('_imagens/coleetaa.png')" onmouseout="mudaFoto('_imagens/18-anxiety-icon1.png')"><a href="coleta.html">Coleta</a></li>
+ 
+  </ul> 
+ </nav>
+</header>
+ <section id="corpo-full">
+ <article id="noticia-principal">
+ <header id="cabecalho-artigo">
+ <hgroup>
+<h3>Home &nbsp; > &nbsp; Listar empresa</h3>
+<h1>Listagem de coletas solicitadas por empresas</h1>
+
+<h3 class="direita">Atualizado em 17/Agosto/2015</h3>
+
+</hgroup>
+</header>
+
+
+
+<table id="tabelaspec">
+<caption>Empresas<span> Mar/2015</span></caption>
+<colgroup span="8">
+<col class="coluna1"/>
+<col class="coluna2"/>
+<col class="coluna3"/>
+<col class="coluna4"/>
+<col class="coluna5"/>
+<col class="coluna6"/>
+<col class="coluna7"/>
+<col class="coluna8"/>
+</colgroup>
+
+
 							<%
 								Empresa e = new Empresa();
 								
@@ -83,21 +99,35 @@ java.util.List, java.sql.SQLException"%>
 								<br>
 								<br>
 								
-						</table>	
-	
-							
-							
-							<!-- Footer -->
-			<footer id="footer">
+						</table>
+<br/>
+<br/>
 
-				
 
-				<!-- Menu -->
-					<ul class="menu">
-						<li>Copyright &copy; 2015 One core technology </li><li></a></li>
-					</ul>
 
-			</footer>
-			
-	</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+</section>
+
+</section>
+<footer id="rodape">
+<p>Copyright 2013 - by One Core<br/>
+<a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | Twitter</p>
+</footer>
+</div>
+</body>
 </html>

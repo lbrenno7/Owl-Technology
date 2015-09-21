@@ -1,179 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
 
-<html>
-	<head>
-		<title>One Core</title>
-		<meta http-equiv="content-type" content="text/html; charset utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.onvisible.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-			<link rel="stylesheet" href="css/style-noscript.css" />
-		</noscript>
-		
-	</head>
-	<body class="home">
 
-		<!-- Header -->
-			<div id="header">
-						
-				<!-- Inner -->
-					<div class="inner">
-						<header>
-							<h1><a href="homes.html" id="logo">Coleta Seletiva</a></h1>
-							<hr />
-							<p>Vamos ajudar?</p>
-						</header>
-						<footer>
-							
-						</footer>
-					</div>
-				
-				<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="homes.html">Home</a></li>
-                                                        <li><a href="cadastroempresa.jsp">Cadastro Empresa</a></li>
-                                                        <li><a href="listarempresa.jsp">Listar Empresa</a></li>
-							
-                                                        <li><a href="listar.jsp">Listar Coleta</a></li>
-							
-							
-							
-                                                       <li><a href="login.jsp" accesskey="4" title="">Sair</a></li>
-						</ul>
-					</nav>
+<title>One Core</title>
+<link rel="stylesheet" href="_css/estilo.css"/>
 
-			</div>
 
-<!-- Carousel -->
-				<section class="carousel">
-					<div class="reel">
+</head>
+<script language="javascript" src="_javascript/funcoes.js">
 
-						<article>
-							<a href="#" class="image featured"><img src="images/103424_b6a62fc7bceebfc1c573e2cd02e37726.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Papel</a></h3>
-							</header>
-							<p>Embalagens de papel, papel utilizado em impressoras e copiadoras, revistas, jornais e pap�is diversos</p>
-						</article>
+</script>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/ghjk.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Vidro</a></h3>
-							</header>
-							<p>Vidrarias em geral, garrafas de bebida, l�mpadas, embalagens diversas, frascos em geral, potes de produto aliment�cios, copos..
-</p>
-						</article>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/103423_ce4bf5db308e25d92c7ff9eb42f45289.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Pl�stico</a></h3>
-							</header>
-							<p>Copos vazios, embalagens diversas, sacolas pl�sticas, peda�os de acr�lico, garrafas de refri tipo pet, baldes.</p>
-						</article>
+<body>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/103422_84e8aa1cd48212fd973804eb93504c98.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Metal</a></h3>
-							</header>
-							<p>Metais em geral, latas de refri, clips, parafusos, pregos, tampas met�licas de garrafas, fios el�tricos.</p>
-						</article>
+<div id="interface">
+<header id="cabecalho">
 
-						<article>
-							<a href="#" class="image featured"><img src="images/adesivo-lixeira-coleta-seletiva-nao-reciclaveis-665155n0.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">N�o recicl�veis</a></h3>
-							</header>
-							<p>Res�duos misturados e n�o passivel de separa��o, reaproveitamento ou reciclagem(rejeitos).</p>
-						</article>
+<hgroup>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/103426_8a6999af2e30fd440af6d3c3c0538a08.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Org�nicos</a></h3>
-							</header>
-							<p>Resto de alimentos e de poda e corte de vegeta��o, materias originados de organismos vivos..</p>
-						</article>
+<h1>Coleta seletiva</h1>
+<h2></h2>
+</hgroup>
+<img id="icone" src="_imagens/elmundo.png"/>
+<nav id="menu">
 
-						<article>
-							<a href="#" class="image featured"><img src="images/thumb_27338_895647_2_4a992d4f808a075d3d7a5f5dbd1c75b0.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">N�o recicl�vel (Vidro)</a></h3>
-							</header>
-							<p>Cristais, espelho, l�mpadas, cer�micas, porcelanas, refrat�rios, tubos de tv, cer�micas, porcelanas, ampolas.</p>
-						</article>
+  <ul type="disc">
+ <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/elmundo.png')"><a href="index.html">Inicial</a></li>
+ <li onmouseover="mudaFoto('_imagens/parc.png')" onmouseout="mudaFoto('_imagens/elmundo.png')"><a href="cadastroempresa.html"> Cadastrar Empresa</a></li>
+ <li onmouseover="mudaFoto('_imagens/coleetaa.png')" onmouseout="mudaFoto('_imagens/elmundo.png')"><a href="listarcoleta.html">Listar Coleta</a></li>
+ <li onmouseover="mudaFoto('_imagens/coleetaa.png')" onmouseout="mudaFoto('_imagens/elmundo.png')"><a href="listarempresa.html">Listar Empresa</a></li>
+ <li><a href="ControladorUsuario?cmd=logout" accesskey="4" title="">Sair</a></li>
+ 
+  </ul> 
+ </nav>
+</header>
+ <section id="corpo-full">
+ <article id="noticia-principal">
+ <header id="cabecalho-artigo">
+ <hgroup>
+<h3>Coleta &nbsp; > &nbsp; Reciclagem</h3>
+<h1>Coleta seletiva</h1>
+<h3 class="direita">Atualizado em 16/Agosto/2015</h3>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/thumb_27338_895647_2_4a992d4f808a075d3d7a5f5dbd1c75b0.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">N�o recicl�vel (Pl�stico)</a></h3>
-							</header>
-							<p>Fraldas descart�veis, adesivos, embalagens com l�minas metalizadas, cabos de panela e tomadas.</p>
-						</article>
+<hgroup>
+</header>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/thumb_27338_895647_2_4a992d4f808a075d3d7a5f5dbd1c75b0.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">N�o recicl�vel (Papel)</a></h3>
-							</header>
-							<p>Papel higi�nico, fotografia, papel carbono, etiquetas adesivas, guardanapos.</p>
-						</article>
+<h2>O que é?</h2>
+<p>Coleta seletiva é o recolhimento de materiais recicláveis (papel, plástico, metal e vidro) que não devem ser misturados aos lixos comuns das residên&shy;cias ou locais de trabalho. Trata-se de um cuidado dado ao resíduo que começa com a separação dos materiais em orgânicos e inorgânicos, e, em seguida, com a disposi&shy;ção correta para o reaproveita&shy;mento e reciclagem.</p>
+ 
+<p>De forma a sensibilizar as pessoas para questão do correto tratamento que os resíduos sólidos produzidos no dia-a-dia devem receber, seja nos ambien&shy;tes públicos ou privados, a coleta seletiva também funciona como um processo de educação ambiental, na medida em que conscientiza as pessoas sobre os proble&shy;mas do desper&shy;dício de recursos naturais e da poluição causada pelo lixo. </p>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/thumb_27338_895647_2_4a992d4f808a075d3d7a5f5dbd1c75b0.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">N�o recicl�vel (Metal)</a></h3>
-							</header>
-							<p>Esponjas de a�o, grampos, clipes, latas de tinta, embalagens de aeros�is ou com mat�rias t�xicos.</p>
-						</article>
+<figure class="foto-legenda">
+<img src="_imagens/21.png"/>
+<figcaption>
+<p>Você SE-PA-RA, a cidade CRESCE e a vida AGRADECE.</p>
+</figcaption>
+</figure>
 
-					</div>
-				</section>
-					
-						
-					
-	
+<h2>Implantando a coleta</h2>
+<p>A coleta seletiva e a reciclagem de resíduos são soluções desejáveis, por permitirem a redução do volume de lixo para disposição final.
 
-		
-	
+O fundamento da coleta seletiva é a separação, pela população, dos materiais recicláveis (papéis, vidros, plásticos e metais) do restante do lixo.</p>
 
-	<!-- Footer -->
-			<div id="footer">
-				<div class="container">
-<div class="row">
+<p>A implantação da coleta seletiva pode começar com uma experiência-piloto, que vai sendo ampliada aos poucos. O primeiro passo é a realização de uma campanha informativa junto à população, convencendo-a da importância da reciclagem e orientando-a para que separe o lixo em recipientes para cada tipo de material.</p>
+
+<p>É aconselhável distribuir à população, ao menos inicialmente, recipientes adequados à separação e ao armazenamento dos resíduos recicláveis nas residências (normalmente sacos de papel ou plástico).</p>
+
+<p>A instalação de postos de entrega voluntária (PEV) em locais estratégicos melhora a operação da coleta seletiva em locais públicos. A mobilização da sociedade, a partir das campanhas, pode estimular iniciativas em conjuntos habitacionais, shopping centers e edifícios comerciais e públicos.</p>
+
+<p>Deve-se buscar elaborar um plano de coleta, definindo equipamentos e periodicidade de coleta dos resíduos. A regularidade e eficácia no recolhimento dos materiais são importantes para que a população tenha confiança e se disponha a participar. Não vale a pena iniciar um processo de coleta seletiva se há o risco de interrompê-lo, pois a perda de credibilidade dificulta a retomada.</p>
 
 
 
-					
 
-					
-						
-							
-							<!-- Copyright -->
-								<div class="copyright">
-									<ul class="menu">
-										<li>Copyright &copy; 2015 One core technology
-									</ul>
-								</div>
-							
-						</div>
-					
-					</div>
-				</div>
-			</div>
+<h2>Como o sistema funciona</h2>
+<p>Tem como objetivo facilitar o contato dos clientes com as empresas de coleta seletiva, para que sejam realizadas as coletas na residência do cliente,
+fazendo assim, será muito mais fácil de entrar em contato com tais empresas.</p>
 
-	</body>
+
+
+</article>
+</section>
+
+<footer id="rodape">
+<p>Copyright 2015 - by One Core<br/>
+<a href="http://facebook.com/" target="_blank">Facebook</a> | Twitter</p>
+</footer>
+</div>
+</body>
 </html>

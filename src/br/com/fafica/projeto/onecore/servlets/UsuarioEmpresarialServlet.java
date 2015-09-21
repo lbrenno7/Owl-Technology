@@ -41,20 +41,20 @@ public class UsuarioEmpresarialServlet extends HttpServlet {
 		
 		
 		UsuarioEmpresarial e = new UsuarioEmpresarial();
-		e.setNome(request.getParameter("nome"));
-		e.setEmail(request.getParameter("email"));
-		e.setMatricula(request.getParameter("matricula"));
-		e.setVinculo(request.getParameter("cnpj"));
-		e.setCEP(request.getParameter("cep"));
-		e.setRua(request.getParameter("rua"));
-		e.setNumero(Integer.parseInt(request.getParameter("numero")));
-		e.setBairro(request.getParameter("bairro"));
-		e.setCidade(request.getParameter("cidade"));
-		e.setEstado(request.getParameter("estado"));
-		e.setTelefone(request.getParameter("phone"));
-		e.setSenha(request.getParameter("pwd1"));
-		e.setPerguntaSecreta(request.getParameter("pergunta"));
-		e.setRespostaSecreta(request.getParameter("resposta"));
+		e.setNome(request.getParameter("tNome"));
+		e.setMatricula(request.getParameter("tMat"));
+		e.setEmail(request.getParameter("tEmail"));
+		e.setVinculo(request.getParameter("tVin"));
+		e.setTelefone(request.getParameter("tTel"));
+		e.setSenha(request.getParameter("PWD1"));
+		e.setRua(request.getParameter("tRua"));
+		e.setNumero(Integer.parseInt(request.getParameter("tNum")));
+		e.setBairro(request.getParameter("tBairro"));
+		e.setCEP(request.getParameter("tCep"));
+		e.setEstado(request.getParameter("tEst"));
+		e.setCidade(request.getParameter("tCid"));
+		e.setPerguntaSecreta(request.getParameter("tPerg"));
+		e.setRespostaSecreta(request.getParameter("tResp"));
 		e.setGrupo(1);
 		
 		
@@ -67,7 +67,7 @@ public class UsuarioEmpresarialServlet extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/login.jsp");
+		response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/login.html");
 		
 	}
 

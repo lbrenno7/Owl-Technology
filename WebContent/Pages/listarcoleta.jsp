@@ -5,82 +5,69 @@ br.com.fafica.projeto.onecore.controladores.ColetaControler,
 java.util.List"%>
 
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+
+<title>Coleta Seletiva</title>
+<link rel="stylesheet" href="_css/estilo.css"/>
+<link rel="stylesheet" href="_css/specs.css"/>
 
 
-<html>
-	<head>
-		<title>One Core</title>
-		<meta http-equiv="content-type" content="text/html; charset utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/jquery.dropotron.min.js"></script>
-		<script src="js/jquery.scrolly.min.js"></script>
-		<script src="js/jquery.onvisible.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-layers.min.js"></script>
-		<script src="js/init.js"></script>
-		
-		<script type="text/javascript">
-		
-		function confirmaAcao (msg, url, param){ 
-			if (confirm(msg)){
-				url += '?'+param;
-				window.location.href = url;
-			} 
-			return false;
-		}
-		
-		</script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel.css" />
-			<link rel="stylesheet" href="css/style.css" />
-			<link rel="stylesheet" href="css/style-desktop.css" />
-			<link rel="stylesheet" href="css/style-noscript.css" />
-		</noscript>
-		
-	</head>
-	<body class="faq">
+</head>
+<script language="javascript" src="_javascript/funcoes.js">
 
-		<!-- Header -->
-			<div id="header">
+</script>
 
-				<!-- Inner -->
-					<div class="inner">
-						<header>
-							<h1><a href="index.html" id="logo">Coleta Seletiva</a></h1>
-						</header>
-					</div>
-				
-				
-			<!-- Nav -->
-					<nav id="nav">
-						<ul>
-							<li><a href="homer.html">Home</a></li>
-							<li>
-								<a href="">Parcerias</a>
-								<ul>
-									<li><a href="solicitarparceria.jsp">Solicitar Parceria</a></li>
-									<li><a href="parceria.html">Parceiros</a></li>
-									
-									
-								</ul>
-							</li>
-                                                        <li><a href="listarcoleta.jsp">Listar Coleta</a></li>
-							<li><a href="coletaseletiva.jsp">Coleta</a></li>
-							<li><a href="faqs.html">FAQ</a></li>
-							<li><a href="contato.jsp">Contatos</a></li>
-                                                       <li><a href="login.jsp" accesskey="4" title="">Sair</a></li>
-						</ul>
-					</nav>
+<body>
+<div id="interface">
+<header id="cabecalho">
 
-			</div>
+<hgroup>
 
-					
-						
-						<table border="1">
+<h1></h1>
+<h2></h2>
+</hgroup>
+<img id="icone" src="_imagens/Actions-view-calendar-list-icon.png"/>
+<nav id="menu">
+<h1>Menu Principal</h1>
+  <ul type="disc">
+   <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/Actions-view-calendar-list-icon.png')"><a href="index.html">Inicial</a></li>
+ <li onmouseover="mudaFoto('_imagens/parc.png')" onmouseout="mudaFoto('_imagens/Actions-view-calendar-list-icon.png')"><a href="parcerias.html"> Parcerias</a></li>
+  <li onmouseover="mudaFoto('_imagens/recy.png')" onmouseout="mudaFoto('_imagens/Actions-view-calendar-list-icon.png')"><a href="reciclando.html"> Reciclando</a></li>
+ <li onmouseover="mudaFoto('_imagens/faq_img.png')" onmouseout="mudaFoto('_imagens/Actions-view-calendar-list-icon.png')"><a href="faq.html">FAQ</a></li>
+ <li onmouseover="mudaFoto('_imagens/Actions-view-calendar-list-icon.png')" onmouseout="mudaFoto('_imagens/Actions-view-calendar-list-icon.png')"><a href="listarcoleta.html">Listar coleta</a></li>
+ <li onmouseover="mudaFoto('_imagens/coleetaa.png')" onmouseout="mudaFoto('_imagens/Actions-view-calendar-list-icon.png')"><a href="coleta.html">Coleta</a></li>
+
+  </ul> 
+ </nav>
+</header>
+ <section id="corpo-full">
+ <article id="noticia-principal">
+ <header id="cabecalho-artigo">
+ <hgroup>
+<h3>Home &nbsp; > &nbsp; Listar coleta</h3>
+<h1>Listagem de coletas solicitadas por usuários</h1>
+
+<h3 class="direita">Atualizado em 17/Agosto/2015</h3>
+
+</hgroup>
+</header>
+
+
+
+<table id="tabelaspec">
+<caption>Usuários<span> Mar/2015</span></caption>
+<colgroup span="5">
+<col class="coluna1"/>
+<col class="coluna2"/>
+<col class="coluna3"/>
+<col class="coluna4"/>
+<col class="coluna5"/>
+</colgroup>
+
+
 							<%
 								Coleta c = new Coleta();
 								
@@ -101,23 +88,34 @@ java.util.List"%>
 								}
 								%>
 								
-						</table>					
-							
-				
-	
-							
-							
-							<!-- Footer -->
-			<footer id="footer">
+						</table>	
 
-				
 
-				<!-- Menu -->
-					<ul class="menu">
-						<li>Copyright &copy; 2015 One core technology </li><li></a></li>
-					</ul>
 
-			</footer>
-			
-	</body>
+
+
+
+
+
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+</article>
+</section>
+
+</section>
+<footer id="rodape">
+<p>Copyright 2013 - by One Core<br/>
+<a href="http://facebook.com/cursosemvideo" target="_blank">Facebook</a> | Twitter</p>
+</footer>
+</div>
+</body>
 </html>
