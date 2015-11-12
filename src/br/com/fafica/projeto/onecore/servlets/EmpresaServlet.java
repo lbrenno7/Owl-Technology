@@ -40,15 +40,15 @@ public class EmpresaServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
 		Empresa empresa = new Empresa();
-		empresa.setRazaoSocial(request.getParameter("razaosocial"));
+		empresa.setRazaoSocial(request.getParameter("tRazao"));
 		empresa.setCNPJ(request.getParameter("cnpj"));
-		empresa.setCep(request.getParameter("cep"));
+		empresa.setTelefone(request.getParameter("tel"));
 		empresa.setRua(request.getParameter("rua"));
-		empresa.setNumero(Integer.parseInt(request.getParameter("numero")));
+		empresa.setNumero(Integer.parseInt(request.getParameter("tNum")));
 		empresa.setBairro(request.getParameter("bairro"));
-		empresa.setCidade(request.getParameter("cidade"));
+		empresa.setCep(request.getParameter("cep"));
 		empresa.setEstado(request.getParameter("estado"));
-		empresa.setTelefone(request.getParameter("telefone"));
+		empresa.setCidade(request.getParameter("cidade"));
 		
 		try {
 			EmpresaControler c = EmpresaControler.getInstance();

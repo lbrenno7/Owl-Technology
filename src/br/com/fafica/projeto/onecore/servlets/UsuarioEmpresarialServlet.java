@@ -42,16 +42,16 @@ public class UsuarioEmpresarialServlet extends HttpServlet {
 		
 		UsuarioEmpresarial e = new UsuarioEmpresarial();
 		e.setNome(request.getParameter("tNome"));
-		e.setMatricula(request.getParameter("tMat"));
-		e.setEmail(request.getParameter("tEmail"));
-		e.setVinculo(request.getParameter("tVin"));
-		e.setTelefone(request.getParameter("tTel"));
+		e.setMatricula(request.getParameter("matricula"));
+		e.setEmail(request.getParameter("email"));
+		e.setVinculo(request.getParameter("vinculo"));
+		e.setTelefone(request.getParameter("tel"));
 		e.setSenha(request.getParameter("PWD1"));
-		e.setRua(request.getParameter("tRua"));
+		e.setRua(request.getParameter("rua"));
 		e.setNumero(Integer.parseInt(request.getParameter("tNum")));
-		e.setBairro(request.getParameter("tBairro"));
-		e.setCEP(request.getParameter("tCep"));
-		e.setEstado(request.getParameter("tEst"));
+		e.setBairro(request.getParameter("bairro"));
+		e.setCEP(request.getParameter("cep"));
+		e.setEstado(request.getParameter("estado"));
 		e.setCidade(request.getParameter("tCid"));
 		e.setPerguntaSecreta(request.getParameter("tPerg"));
 		e.setRespostaSecreta(request.getParameter("tResp"));

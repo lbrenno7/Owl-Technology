@@ -16,11 +16,11 @@ public class coletaDao {
 	
 		
 		String sql = "insert into coleta "
-				+ "(rua, numero, bairro, cidade, estado, data_de_coleta, horario_de_coleta)"
+				+ "(rua, numero, cep, bairro, cidade, estado, data_de_coleta, horario_de_coleta)"
 				+ " values ('" + coleta.getRua() + "','" + coleta.getNumero() + "','"
-				+ coleta.getBairro() + "' , '" + coleta.getCidade()+ "' , '"
-				+ coleta.getEstado() + "' , '" +coleta.getDataDeColeta()+ "' , '" 
-				+ coleta.getHorarioDeColeta() + "')";
+				+ coleta.getCep() + "' , '"+ coleta.getBairro() + "' , '" 
+				+ coleta.getCidade()+ "' , '"+ coleta.getEstado() + "' , '" 
+				+coleta.getDataDeColeta()+ "' , '" 	+ coleta.getHorarioDeColeta() + "')";
 		
 		conexao.prepareStatement(sql).executeUpdate();
 		
@@ -30,7 +30,7 @@ public class coletaDao {
 	//metodo que lista todas as coletas
 	public List<Coleta> listar(){
 	List<Coleta> listaColeta = new ArrayList<>();
-	String sql = "select indice, rua, numero, bairro, cidade, estado, data_de_coleta, horario_de_coleta from coleta order by indice";
+	String sql = "select indice, rua, numero, cep, bairro, cidade, estado, data_de_coleta, horario_de_coleta, status_coleta from coleta order by indice";
 	
 		try{
 			ResultSet rs;
@@ -42,11 +42,13 @@ public class coletaDao {
 				coleta.setIndice(rs.getInt(1));
 				coleta.setRua(rs.getString(2));
 				coleta.setNumero(rs.getInt(3));
-				coleta.setBairro(rs.getString(4));
-				coleta.setCidade(rs.getString(5));
-				coleta.setEstado(rs.getString(6));
-				coleta.setDataDeColeta(rs.getString(7));
-				coleta.setHorarioDeColeta(rs.getString(8));
+				coleta.setCep(rs.getString(4));
+				coleta.setBairro(rs.getString(5));
+				coleta.setCidade(rs.getString(6));
+				coleta.setEstado(rs.getString(7));
+				coleta.setDataDeColeta(rs.getString(8));
+				coleta.setHorarioDeColeta(rs.getString(9));
+				coleta.setStatus(rs.getString(10));
 				listaColeta.add(coleta);
 			}
 		}
@@ -63,7 +65,20 @@ public class coletaDao {
 	public void alterar(Coleta coleta) throws SQLException {
 	
 	
-		String sql = "update coleta set data_de_coleta = '"+coleta.getDataDeColeta()+"' , hora_de_coleta = '"+coleta.getHorarioDeColeta()+"' where id = '"+coleta.getIndice()+"'";
+		String sql = "update coleta set data_de_coleta = '"+coleta.getDataDeColeta()+"' , hora_de_coleta = '"+coleta.getHorarioDeColeta()+"' where indice = '"+coleta.getIndice()+"'";
+		try {
+		conexao.prepareStatement(sql).executeUpdate();
+		} catch (SQLException e) {
+		e.printStackTrace();
+		}
+			
+	}
+	
+	//metodo que altera  status de uma coleta para atendido
+	public void atender(String indice) throws SQLException {
+		
+		
+		String sql = "update coleta set status_coleta = 'atendido' where indice = '"+indice+"'";
 		try {
 		conexao.prepareStatement(sql).executeUpdate();
 		} catch (SQLException e) {

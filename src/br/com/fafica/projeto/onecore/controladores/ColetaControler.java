@@ -35,6 +35,10 @@ public class ColetaControler {
 		dao.alterar(coleta);
 	}
 	
+	public void atender (String indice) throws SQLException{
+		dao.atender(indice);
+	}
+	
 	public void deletar (Coleta coleta) throws SQLException{
 		dao.excluir(coleta);
 	}

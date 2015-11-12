@@ -28,36 +28,59 @@ public class ColetaServlet extends HttpServlet {
     }
 
 	/**
+	 * @throws IOException 
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		String indiceC = request.getParameter("indicecoleta");
+		
+try {
+			
+			ColetaControler controler = ColetaControler.getInstance();
+			controler.atender(indiceC);
+			
+			response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/listacoleta.jsp");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 	}
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Coleta coleta = new Coleta();
-		coleta.setRua(request.getParameter("rua"));
-		coleta.setNumero(Integer.parseInt(request.getParameter("numero")));
-		coleta.setBairro(request.getParameter("bairro"));
-		coleta.setCidade(request.getParameter("cidade"));
-		coleta.setEstado(request.getParameter("estado"));
-		coleta.setDataDeColeta(request.getParameter("date"));
-		coleta.setHorarioDeColeta(request.getParameter("hour"));
 		
-		try {
-			ColetaControler c = ColetaControler.getInstance();
-			c.adicionar(coleta);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		
+		
+		
+		
+		Coleta coleta = new Coleta();
+		coleta.setDataDeColeta(request.getParameter("tDat"));
+		coleta.setHorarioDeColeta(request.getParameter("tHor"));
+		coleta.setRua(request.getParameter("tRua"));
+		coleta.setNumero(Integer.parseInt(request.getParameter("tNum")));
+		coleta.setCep(request.getParameter("tCep"));
+		coleta.setEstado(request.getParameter("tEst"));
+		coleta.setCidade(request.getParameter("tCid"));
+		coleta.setBairro(request.getParameter("tBairro"));
+		
+			try {
+				ColetaControler c = ColetaControler.getInstance();
+				c.adicionar(coleta);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
 		
 		response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/home.html");
 		
 	}
+		
 
 }

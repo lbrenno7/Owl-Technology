@@ -49,8 +49,7 @@ public class LoginServlet extends HttpServlet {
 			check = login.checar(u);
 			int g = check.getGrupo();
 			
-			System.out.println(u.getEmail()+" , "+u.getSenha());
-			System.out.println(check.getEmail()+" , "+check.getSenha());
+			
 			if(u.getSenha().equals(check.getSenha())){
 				
 				switch (g) {
@@ -73,7 +72,7 @@ public class LoginServlet extends HttpServlet {
 				
 			}
 			else{
-				response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/login.jsp");
+				response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/login.html");
 			}
 		
 		} catch (SQLException e) {

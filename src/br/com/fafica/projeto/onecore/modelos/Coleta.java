@@ -5,19 +5,22 @@ public class Coleta {
 	private int indice;
 	private String rua;
 	private int numero;
+	private String cep;
 	private String bairro;
 	private String cidade;
 	private String estado;
 	private String dataDeColeta;
 	private String horarioDeColeta;
-	private boolean status = false;
+	private String status;
 	
 	
-	public boolean isStatus() {
+	
+
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(boolean status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 
@@ -71,6 +74,16 @@ public class Coleta {
 	public void setHorarioDeColeta(String horarioDeColeta) {
 		this.horarioDeColeta = horarioDeColeta;
 	}
+
+	public String getCep() {
+		return cep;
+	}
+
+	public void setCep(String cep) {
+		this.cep = cep;
+	}
+
+	
 	
 	
 }

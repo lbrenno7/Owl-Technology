@@ -1,96 +1,104 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8" />
+<!DOCTYPE HTML>
 
+<html>
+	<head>
+		<title>Coleta Seletiva</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<link rel="shortcut icon" href="images/favicon.ico"/>
+	</head>
+	<body class="index">
+		<div id="page-wrapper">
 
-<title>Coleta Seletiva</title>
-<link rel="stylesheet" href="_css/estilo.css"/>
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1 id="logo"><a href="index.html">COLETA SELETIVA </a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="current"><a href="index.html">HOME</a></li>
+							<li class="submenu">
+								<a href="#">MENU</a>
+								<ul>
+									<li><a href="cadusuario.html">Cad. Usuário</a></li>
+									<li><a href="cadempresarial.html">Cad. Empresarial</a></li>
+									
+								
+								</ul>
+							</li>
+							
+						</ul>
+					</nav>
+				</header>
 
+			<!-- Banner -->
+				<section id="banner">
 
-</head>
-<script language="javascript" src="_javascript/funcoes.js">
+					
+					<div class="inner">
 
-</script>
+						<header>
+							<h2>LOGIN</h2>
+							<h1>O que você faz com seu lixo, faz muito por você. </h1>
+						</header>
+											<form method="post" id="fContato" action="http://localhost:8080/OneCoreProject/LoginServlet">
 
-
-<body>
-<div id="interface">
-<header id="cabecalho">
-
-<hgroup>
-
-<h1>One Core</h1>
-<h2></h2>
-</hgroup>
-<img id="icone" src="_imagens/elmundo.png"/>
-<nav id="menu">
-<h1></h1>
-  <ul type="disc">
- <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/elmundo.png')"><a href="index.html">Inicial</a></li>
- <li onmouseover="mudaFoto('_imagens/parc.png')" onmouseout="mudaFoto('_imagens/elmundo.png')"><a href="parcerias.html"> Parcerias</a></li>
-  <li onmouseover="mudaFoto('_imagens/recy.png')" onmouseout="mudaFoto('_imagens/elmundo.png')"><a href="reciclando.html"> Reciclando</a></li>
- <li onmouseover="mudaFoto('_imagens/faq_img.png')" onmouseout="mudaFoto('_imagens/elmundo.png')"><a href="faq.html">FAQ</a></li>
-  <li onmouseover="mudaFoto('_imagens/coleetaa.png')" onmouseout="mudaFoto('_imagens/elmundo.png')"><a href="listarcoleta.html">Listar coleta</a></li>
- <li onmouseover="mudaFoto('_imagens/coleetaa.png')" onmouseout="mudaFoto('_imagens/elmundo.png')"><a href="coleta.html">Coleta</a></li>
-  <li><a href="ControladorUsuario?cmd=logout" accesskey="4" title="">Sair</a></li>
- 
-  </ul> 
- </nav>
-</header>
- <section id="corpo-full">
- <article id="noticia-principal">
- <header id="cabecalho-artigo">
- <hgroup>
-<h3>Coleta &nbsp; > &nbsp; Reciclagem</h3>
-<h1>Coleta seletiva</h1>
-<h3 class="direita">Atualizado em 16/Agosto/2015</h3>
-
-<hgroup>
-</header>
-
-<h2>O que é?</h2>
-<p>Coleta seletiva é o recolhimento de materiais recicláveis (papel, plástico, metal e vidro) que não devem ser misturados aos lixos comuns das residên&shy;cias ou locais de trabalho. Trata-se de um cuidado dado ao resíduo que começa com a separação dos materiais em orgânicos e inorgânicos, e, em seguida, com a disposi&shy;ção correta para o reaproveita&shy;mento e reciclagem.</p>
- 
-<p>De forma a sensibilizar as pessoas para questão do correto tratamento que os resíduos sólidos produzidos no dia-a-dia devem receber, seja nos ambien&shy;tes públicos ou privados, a coleta seletiva também funciona como um processo de educação ambiental, na medida em que conscientiza as pessoas sobre os proble&shy;mas do desper&shy;dício de recursos naturais e da poluição causada pelo lixo. </p>
-
-<figure class="foto-legenda">
-<img src="_imagens/21.png"/>
-<figcaption>
-<p>Você SE-PA-RA, a cidade CRESCE e a vida AGRADECE.</p>
-</figcaption>
-</figure>
-
-<h2>Implantando a coleta</h2>
-<p>A coleta seletiva e a reciclagem de resíduos são soluções desejáveis, por permitirem a redução do volume de lixo para disposição final.
-
-O fundamento da coleta seletiva é a separação, pela população, dos materiais recicláveis (papéis, vidros, plásticos e metais) do restante do lixo.</p>
-
-<p>A implantação da coleta seletiva pode começar com uma experiência-piloto, que vai sendo ampliada aos poucos. O primeiro passo é a realização de uma campanha informativa junto à população, convencendo-a da importância da reciclagem e orientando-a para que separe o lixo em recipientes para cada tipo de material.</p>
-
-<p>É aconselhável distribuir à população, ao menos inicialmente, recipientes adequados à separação e ao armazenamento dos resíduos recicláveis nas residências (normalmente sacos de papel ou plástico).</p>
-
-<p>A instalação de postos de entrega voluntária (PEV) em locais estratégicos melhora a operação da coleta seletiva em locais públicos. A mobilização da sociedade, a partir das campanhas, pode estimular iniciativas em conjuntos habitacionais, shopping centers e edifícios comerciais e públicos.</p>
-
-<p>Deve-se buscar elaborar um plano de coleta, definindo equipamentos e periodicidade de coleta dos resíduos. A regularidade e eficácia no recolhimento dos materiais são importantes para que a população tenha confiança e se disponha a participar. Não vale a pena iniciar um processo de coleta seletiva se há o risco de interrompê-lo, pois a perda de credibilidade dificulta a retomada.</p>
+    <label for="cEmail">E-mail:</label><input type="email" name="tEmail"id="cEmail" size="40" maxlength="40" placeholder="Digite seu e-mail"/><br/>
+   <label for="cSenha">Senha:</label><input type="password" name="tSenha"id="cSenha" size="40" maxlength="8" placeholder="Digite sua senha"/></br/>
+	<p class="forgot-password"><a href="esqueciasenha.html">ESQUECEU SUA SENHA?</a></p><br/>
+   
+   
+	
 
 
 
 
-<h2>Como o sistema funciona</h2>
-<p>Tem como objetivo facilitar o contato dos clientes com as empresas de coleta seletiva, para que sejam realizadas as coletas na residência do cliente,
-fazendo assim, será muito mais fácil de entrar em contato com tais empresas.</p>
+<input type="submit" onClick="checkMe()" value="LOGAR">
 
 
+<br/>
+<br/>
+</form>
+						
 
+					
+					</div>
 
-</article>
-</section>
+				</section>
 
-<footer id="rodape">
-<p>Copyright 2015 - by One Core<br/>
-<a href="http://facebook.com/" target="_blank">Facebook</a> | Twitter</p>
-</footer>
-</div>
-</body>
+		
+
+			<!-- Footer -->
+				<footer id="footer">
+
+					<ul class="icons">
+						<li><a href="#" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li>
+						<li><a href="#" class="icon circle fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon circle fa-dribbble"><span class="label">Dribbble</span></a></li>
+					</ul>
+
+					<ul class="copyright">
+						<li>&copy; Owl Technology</li><li>2015</a></li>
+					</ul>
+
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollgress.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
