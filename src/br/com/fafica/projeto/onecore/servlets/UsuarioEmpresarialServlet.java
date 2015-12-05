@@ -67,7 +67,7 @@ public class UsuarioEmpresarialServlet extends HttpServlet {
 			e1.printStackTrace();
 		}
 		
-		response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/login.html");
+		response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/index.html");
 		
 	}
 

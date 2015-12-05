@@ -111,7 +111,55 @@ public Usuario checar(Usuario usuario) {
 		
 		return user;
 	}
+
+//recuperar senha
+public Usuario recuperarSenha(Usuario usuario) {
 	
+			String sql = "select email,pergunta_secreta,resposta_secreta,"
+					+ " senha from usuario where email = '" +usuario.getEmail() +"'";
+			Usuario user = new Usuario();
+	
+			ResultSet rs;
+			try {
+				rs = conexao.prepareStatement(sql).executeQuery();
+			
+			while(rs.next()){
+				user.setEmail(rs.getString(1));
+				user.setPerguntaSecreta(rs.getString(2));
+				user.setRespostaSecreta(rs.getString(3));
+				user.setSenha(rs.getString(4));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+			
+	return user;
+}
+
+//metodo do rank
+		public List<Usuario> rank(){
+		List<Usuario> listaUsuario = new ArrayList<>();
+		String sql = "select nome, coletas from usuario order by coletas desc";
+		
+			try{
+				ResultSet rs;
+				rs = conexao.prepareStatement(sql).executeQuery();
+				
+		
+				while(rs.next()){
+					Usuario usuario = new Usuario();
+					usuario.setNome(rs.getString(1));
+					usuario.setColetas(rs.getInt(2));
+					listaUsuario.add(usuario);
+				}
+			}
+			
+			catch (SQLException e) {
+			e.printStackTrace();
+			}
+			return listaUsuario;
+		}
+
 }
 
 

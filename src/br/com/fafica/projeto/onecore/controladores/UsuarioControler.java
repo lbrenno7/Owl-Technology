@@ -44,6 +44,14 @@ public class UsuarioControler {
 		return usuario;
 
 	}
+	public Usuario recuperarSenha(Usuario usuario){
+		usuario = dao.recuperarSenha(usuario);
+		return usuario;
+	}
+	public List<Usuario> rank() throws SQLException{
+		return dao.rank();
+	}
+	
 
 
 }

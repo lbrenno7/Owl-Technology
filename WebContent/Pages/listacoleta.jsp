@@ -2,7 +2,8 @@
 pageEncoding="ISO-8859-1" %>
 <%@page import="br.com.fafica.projeto.onecore.modelos.Coleta,
 br.com.fafica.projeto.onecore.controladores.ColetaControler,
-java.util.List, java.util.Date, java.text.DateFormat, java.text.SimpleDateFormat"%>
+java.util.List, java.util.Date, java.text.DateFormat, java.text.SimpleDateFormat, 
+br.com.fafica.projeto.onecore.modelos.Usuario"%>
 
 <!DOCTYPE HTML>
 
@@ -10,9 +11,9 @@ java.util.List, java.util.Date, java.text.DateFormat, java.text.SimpleDateFormat
 	<head>
 	
 	<script>
-function confirmaAcao (msg, url, param){ 
+function confirmaAcao (msg, url, param, param2){ 
 	if (confirm(msg)){
-		url += '?'+param;
+		url += '?'+param+"&"+param2; //terminar de corrigir a função com o segundo parametro
 		window.location.href = url;
 	} 
 	return false;
@@ -30,23 +31,29 @@ function confirmaAcao (msg, url, param){
 	
 	
 	<body class="contact">
+	<%Usuario usuario = (Usuario) session.getAttribute("usuario");
+	if (usuario == null){
+		response.sendRedirect("index.html");
+	}
+	
+	%>
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<header id="header">
-					<h1 id="logo"><a href="homes.html">COLETA SELETIVA</span></a></h1>
+					<h1 id="logo"><a href="homes.jsp">COLETA SELETIVA</span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="homes.html">HOME</a></li>
+							<li class="current"><a href="homes.jsp">HOME</a></li>
 							<li class="submenu">
 								<a href="#">MENU</a>
 								<ul>
-									<li><a href="faqs.html">FAQ</a></li>
-									<li><a href="parcerias.html">Parcerias</a></li>
-									<li><a href="scoletaa.html">Solicitar Coleta</a></li>
-									<li><a href="listacoleta.html">List.Coletas</a></li>
-									<li><a href="rank.html">Rank</a></li>
-									<li><a href="">Sair</a></li>
+									<li><a href="faqs.jsp">FAQ</a></li>
+									<li><a href="parcerias.jsp">Parcerias</a></li>
+									<li><a href="scoletaa.jsp">Solicitar Coleta</a></li>
+									<li><a href="listacoleta.jsp">List.Coletas</a></li>
+									<li><a href="rank.jsp">Rank</a></li>
+									<li><a href="logout.jsp">Sair</a></li>
 								
 								</ul>
 							</li>
@@ -88,6 +95,7 @@ function confirmaAcao (msg, url, param){
 <col class="coluna7"/>
 <col class="coluna8"/>
 <col class="coluna9"/>
+<col class="coluna10"/>
 </colgroup>
 <tr>
 <th>Indice</th>
@@ -98,6 +106,7 @@ function confirmaAcao (msg, url, param){
 <th>Cidade</th>
 <th>Data</th>
 <th>Hora</th>
+<th>Tipos de Lixo</th>
 <th>Status</th>
 </tr>
 
@@ -105,7 +114,7 @@ function confirmaAcao (msg, url, param){
 								Coleta c = new Coleta();
 								
 								ColetaControler control = ColetaControler.getInstance();
-								List<Coleta> coletas = control.listar();
+								List<Coleta> coletas = control.listarMinhas(usuario.getEmail());
 								for (Coleta coleta : coletas){
 							%>
 							<tr>
@@ -117,16 +126,9 @@ function confirmaAcao (msg, url, param){
 								<td><%=coleta.getCidade() %></td>
 								<td><%=coleta.getDataDeColeta() %></td>
 								<td><%=coleta.getHorarioDeColeta() %></td>
-							
-								<td><%if(coleta.getStatus().equals("aguardando")){%>
-									<a onClick="confirmaAcao('Tem certeza que deseja atender esta coleta?',
-                                            'http://localhost:8080/OneCoreProject/ColetaServlet',
-                                            'indicecoleta=<%=coleta.getIndice()%>')">Atender</a>
-								<%}else{%>
-									Atendido
-								<%} %></td>
-								
-                                                 
+								<td><%=coleta.getTiposDeLixo() %></td>
+								<td><%=coleta.getStatus()%></td>
+								                                                
                                                     								
 								</tr>
 								<%

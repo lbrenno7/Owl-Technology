@@ -65,7 +65,7 @@ public class EmpresaServlet extends HttpServlet {
 		}
 		
 		
-		response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/homes.html");
+		response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/homes.jsp");
 		
 	}
 

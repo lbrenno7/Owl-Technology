@@ -30,6 +30,9 @@ public class ColetaControler {
 	public List<Coleta> listar() throws SQLException{
 		return dao.listar();
 	}
+	public List<Coleta> listarMinhas(String email_usuario) throws SQLException{
+		return dao.listarMinhas(email_usuario);
+	}
 	
 	public void alterar (Coleta coleta) throws SQLException{
 		dao.alterar(coleta);

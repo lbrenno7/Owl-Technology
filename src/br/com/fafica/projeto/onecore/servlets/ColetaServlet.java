@@ -33,13 +33,19 @@ public class ColetaServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		String indiceC = request.getParameter("indicecoleta");
-		
+		String pagina = request.getParameter("pagina");
+		System.out.println(pagina);
 try {
-			
+			//String url = "http://localhost:8080/OneCoreProject/Pages/"+parametro+".jsp";
+		//incluir mais um parametro na função atender, com pra qual pagina vai redirecionar
+	//esta com bug, a pagina nao está chegando esta null
 			ColetaControler controler = ColetaControler.getInstance();
 			controler.atender(indiceC);
 			
-			response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/listacoleta.jsp");
+			
+			
+			response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/"+pagina);
+			
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -60,16 +66,32 @@ try {
 		
 		
 		Coleta coleta = new Coleta();
-		coleta.setDataDeColeta(request.getParameter("tDat"));
-		coleta.setHorarioDeColeta(request.getParameter("tHor"));
 		coleta.setRua(request.getParameter("tRua"));
 		coleta.setNumero(Integer.parseInt(request.getParameter("tNum")));
-		coleta.setCep(request.getParameter("tCep"));
-		coleta.setEstado(request.getParameter("tEst"));
-		coleta.setCidade(request.getParameter("tCid"));
 		coleta.setBairro(request.getParameter("tBairro"));
+		coleta.setCep(request.getParameter("tCep"));
+		coleta.setEstado(request.getParameter("tEstado"));
+		coleta.setCidade(request.getParameter("tCidade"));
+		coleta.setDataDeColeta(request.getParameter("tData"));
+		coleta.setHorarioDeColeta(request.getParameter("tHora"));
+		coleta.setEmail_solicitante(request.getParameter("email"));
+		coleta.setMsg(request.getParameter("tMens"));
 		
-			try {
+		String pagina = request.getParameter("pagina");
+		
+		String[] tiposDeLixoArray = request.getParameterValues("lixos");
+		String tiposDeLixo = "";
+		
+		for (int i = 0; i < tiposDeLixoArray.length; i++) {
+			tiposDeLixo += tiposDeLixoArray[i] + ", ";
+		}
+		
+		
+		
+		coleta.setTiposDeLixo(tiposDeLixo);
+		
+		
+		try {
 				ColetaControler c = ColetaControler.getInstance();
 				c.adicionar(coleta);
 			} catch (SQLException e) {
@@ -78,7 +100,7 @@ try {
 			}
 		
 		
-		response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/home.html");
+		response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/"+pagina);
 		
 	}
 		

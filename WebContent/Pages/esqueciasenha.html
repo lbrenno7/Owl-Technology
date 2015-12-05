@@ -61,12 +61,12 @@ src="https://raw.github.com/danpalmer/jquery.complexify.js/master/jquery.complex
 							<!-- Form -->
 								<div class="content">
 								
-	<form method="post" id="fContato" action="funcao_solicitar_senha.php">
+	<form method="post" id="fContato" action="http://localhost:8080/OneCoreProject/LembrarSenhaServlet">
 
     <label id="cad">E-mail:</label><input type="email" name="tEmail"id="cEmail" size="30"  placeholder="Digite seu e-mail"/><br/>
    
 	 <label id="cad">Pergunta Secreta:</label> 
-	 <select name="tEst" id="cEst" form="perform" onChange="valida()" >
+	 <select name="tPerg" id="cPerg" form="perform" onChange="valida()" >
     <option value="animal">Nome do seu primeiro animal</option> 
     <option value="professor">Seu professor favorito</option> 
     <option value="amigo">Amigo de infância</option> 
@@ -80,6 +80,8 @@ src="https://raw.github.com/danpalmer/jquery.complexify.js/master/jquery.complex
     </select><br/><br/>
 <label id="cad">Resposta Secreta:</label>
 <input type="text" name="tResp" id="cResp" size="30"  placeholder="Lassie"/>
+<label id="cad"></label><br/><br/>
+<input type="submit" value="enviar">
 								</div>
 
 						</section>

@@ -15,6 +15,7 @@ public class Usuario {
 	private String perguntaSecreta;
 	private String respostaSecreta;
 	private int grupo;//0 = usuario, 1 = funcionario, 2 =adm
+	private int coletas;
 	
 	
 	
@@ -95,6 +96,12 @@ public class Usuario {
 	}
 	public void setGrupo(int grupo) {
 		this.grupo = grupo;
+	}
+	public int getColetas() {
+		return coletas;
+	}
+	public void setColetas(int coletas) {
+		this.coletas = coletas;
 	}
 	
 	

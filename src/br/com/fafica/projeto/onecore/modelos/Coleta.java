@@ -12,6 +12,9 @@ public class Coleta {
 	private String dataDeColeta;
 	private String horarioDeColeta;
 	private String status;
+	private String tiposDeLixo;
+	private String email_solicitante;
+	private String msg;
 	
 	
 	
@@ -81,6 +84,30 @@ public class Coleta {
 
 	public void setCep(String cep) {
 		this.cep = cep;
+	}
+
+	public String getTiposDeLixo() {
+		return tiposDeLixo;
+	}
+
+	public void setTiposDeLixo(String tiposDeLixo) {
+		this.tiposDeLixo = tiposDeLixo;
+	}
+
+	public String getEmail_solicitante() {
+		return email_solicitante;
+	}
+
+	public void setEmail_solicitante(String email_solicitante) {
+		this.email_solicitante = email_solicitante;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
 	}
 
 	

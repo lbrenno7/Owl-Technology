@@ -24,14 +24,14 @@ public class LoginServlet extends HttpServlet {
      */
     public LoginServlet() {
         super();
-        // TODO Auto-generated constructor stub
+       
     }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 	}
 
 	/**
@@ -39,40 +39,44 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Usuario u = new Usuario();
-		u.setEmail(request.getParameter("tEmail"));
-		u.setSenha(request.getParameter("tSenha"));
+		Usuario usuario = new Usuario();
+		usuario.setEmail(request.getParameter("tEmail"));
+		usuario.setSenha(request.getParameter("tSenha"));
+		
 		
 		try {
 			Usuario check = new Usuario();
 			UsuarioControler login = UsuarioControler.getInstance();
-			check = login.checar(u);
+			check = login.checar(usuario);
 			int g = check.getGrupo();
 			
 			
-			if(u.getSenha().equals(check.getSenha())){
+			if(usuario.getSenha().equals(check.getSenha())){
 				
 				switch (g) {
 				case 0:
-					response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/home.html");
+					request.getSession().setAttribute("usuario", usuario);
+					response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/homes.jsp");
 					break;
 				
 				case 1:
-					response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/homer.html");
+					request.getSession().setAttribute("usuario", usuario);
+					response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/homer.jsp");
 					break;
 				case 2:
-					response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/homes.html");
+					request.getSession().setAttribute("usuario", usuario);
+					response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/home.jsp");
 					break;
 
 				default:
-					response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/login.html");
+					response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/index.html");
 					break;
 				}
 				
 				
 			}
 			else{
-				response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/login.html");
+				response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/index.html");
 			}
 		
 		} catch (SQLException e) {

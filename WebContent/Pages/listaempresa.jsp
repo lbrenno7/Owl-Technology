@@ -2,7 +2,8 @@
 pageEncoding="ISO-8859-1" %>
 <%@page import="br.com.fafica.projeto.onecore.modelos.Empresa,
 br.com.fafica.projeto.onecore.controladores.EmpresaControler,
-java.util.List, java.sql.SQLException, java.util.Date, java.text.DateFormat, java.text.SimpleDateFormat"%>
+java.util.List, java.sql.SQLException, java.util.Date, java.text.DateFormat, java.text.SimpleDateFormat, 
+br.com.fafica.projeto.onecore.modelos.Usuario"%>
 
 <!DOCTYPE HTML>
 
@@ -18,21 +19,26 @@ java.util.List, java.sql.SQLException, java.util.Date, java.text.DateFormat, jav
 		<link rel="shortcut icon" href="images/favicon.ico"/>
 	</head>
 	<body class="no-sidebar">
+	<%Usuario usuario = (Usuario) session.getAttribute("usuario");
+	if (usuario == null){
+		response.sendRedirect("index.html");
+	}
+	%>
 		<div id="page-wrapper">
 
 			<!-- Header -->
 					<header id="header">
-					<h1 id="logo"><a href="home.html">COLETA SELETIVA</span> </a></h1>
+					<h1 id="logo"><a href="home.jsp">COLETA SELETIVA</span> </a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="home.html">HOME</a></li>
+							<li class="current"><a href="home.jsp">HOME</a></li>
 							<li class="submenu">
 								<a href="#">MENU</a>
 								<ul>
-									<li><a href="cadempresa.html">Cad. Empresa</a></li>
-									<li><a href="listarcoleta.html">List.Coleta</a></li>
-									<li><a href="listaempresa.html">List.Empresa</a></li>
-									<li><a href="">Sair</a></li>
+									<li><a href="cadempresa.jsp">Cad. Empresa</a></li>
+									<li><a href="listarcoleta.jsp">List.Coleta</a></li>
+									<li><a href="listaempresa.jsp">List.Empresa</a></li>
+									<li><a href="logout.jsp">Sair</a></li>
 								
 								</ul>
 							</li>
