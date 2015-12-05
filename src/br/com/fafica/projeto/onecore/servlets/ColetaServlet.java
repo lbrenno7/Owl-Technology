@@ -36,9 +36,7 @@ public class ColetaServlet extends HttpServlet {
 		String pagina = request.getParameter("pagina");
 		System.out.println(pagina);
 try {
-			//String url = "http://localhost:8080/OneCoreProject/Pages/"+parametro+".jsp";
-		//incluir mais um parametro na função atender, com pra qual pagina vai redirecionar
-	//esta com bug, a pagina nao está chegando esta null
+			
 			ColetaControler controler = ColetaControler.getInstance();
 			controler.atender(indiceC);
 			
@@ -47,7 +45,6 @@ try {
 			response.sendRedirect("http://localhost:8080/OneCoreProject/Pages/"+pagina);
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

@@ -2,7 +2,7 @@
 pageEncoding="ISO-8859-1" %>
 <%@page import="br.com.fafica.projeto.onecore.modelos.Coleta,
 br.com.fafica.projeto.onecore.controladores.ColetaControler,
-java.util.List, java.util.Date, java.text.DateFormat, java.text.SimpleDateFormat"%>
+java.util.List, java.util.Date, java.text.DateFormat, java.text.SimpleDateFormat, br.com.fafica.projeto.onecore.modelos.Usuario"%>
 <!DOCTYPE HTML>
 
 <html>
@@ -27,6 +27,11 @@ function confirmaAcao (msg, url, param, param2){
 	
 	
 	<body class="contact">
+	<%Usuario usuario = (Usuario) session.getAttribute("usuario");
+		if (usuario == null){
+		response.sendRedirect("index.html");
+		}
+	%>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -121,7 +126,7 @@ function confirmaAcao (msg, url, param, param2){
 								<td><%if(coleta.getStatus().equals("aguardando")){%>
 									<a onClick="confirmaAcao('Tem certeza que deseja atender esta coleta?',
                                             'http://localhost:8080/OneCoreProject/ColetaServlet',
-                                            'indicecoleta=<%=coleta.getIndice()%>',pagina='listcoleta.jsp')">Atender</a>
+                                            'indicecoleta=<%=coleta.getIndice()%>','pagina=listcoleta.jsp')">Atender</a>
 								<%}else{%>
 									Atendido
 								<%} %></td>
