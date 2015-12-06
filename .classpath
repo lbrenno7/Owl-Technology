@@ -12,6 +12,6 @@
 	<classpathentry kind="lib" path="C:/Users/Brenno Lima/Downloads/outros/servlet-api.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Brenno Lima/Downloads/outros/commons-email-1.3.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Brenno Lima/Downloads/outros/javax.mail.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Brenno Lima/Downloads/outros/json-20140107.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Brenno Lima/Downloads/outros/json-simple-1.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

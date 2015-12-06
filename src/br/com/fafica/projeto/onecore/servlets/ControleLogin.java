@@ -1,6 +1,7 @@
 package br.com.fafica.projeto.onecore.servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 import br.com.fafica.projeto.onecore.dao.UsuarioDao;
 import br.com.fafica.projeto.onecore.modelos.Usuario;
@@ -40,18 +41,29 @@ public class ControleLogin extends HttpServlet {
 		try {
 			arrayListUsuario = new UsuarioDao().listar();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		JSONObject jsonObject = null;
-		JSONArray array = new JSONArray();
+				
+		JSONObject jsonObjectEmail = null;
+		JSONObject jsonObjectSenha = null;
+		JSONArray arrayEmail = new JSONArray();
+		JSONArray arraySenha = new JSONArray();
 		
 		for(Usuario usuario: arrayListUsuario){
-			jsonObject = new JSONObject();
-			jsonObject.put("email", usuario.getEmail());
-			//array.add (metodo add nao existe)
+			jsonObjectEmail = new JSONObject();
+			jsonObjectEmail.put("email", usuario.getEmail());
+			jsonObjectSenha = new JSONObject();
+			jsonObjectSenha.put("Senha", usuario.getSenha());
+			arrayEmail.add(jsonObjectEmail);
+			arraySenha.add(jsonObjectSenha);
+			
 		}
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("application/json");
+		PrintWriter out = response.getWriter();
+		out.print(arrayEmail);
+		out.print(arraySenha);
 	}
 
 	
