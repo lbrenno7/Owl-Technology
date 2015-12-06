@@ -75,7 +75,7 @@ src="https://raw.github.com/danpalmer/jquery.complexify.js/master/jquery.complex
 							<!-- Form -->
 								<div class="content">
 								
-	<form method="post" id="fContato" action="http://localhost:8080/OneCoreProject/LembrarSenhaServlet">
+	<form method="post" id="fContato" action="../LembrarSenhaServlet">
 
     <label id="cad">E-mail:</label><input type="email" name="tEmail"id="cEmail" size="30"  placeholder="Digite seu e-mail"/><br/>
    

@@ -69,7 +69,7 @@ src="https://raw.github.com/danpalmer/jquery.complexify.js/master/jquery.complex
 
 							<!-- Form -->
 								<div class="content">
-<form method="post" id="form1" class="form1" action="http://localhost:8080/OneCoreProject/EmpresaServlet" name="form1">
+<form method="post" id="form1" class="form1" action="../EmpresaServlet" name="form1">
 
 
   <div class="row 20%">
